@@ -1,0 +1,2 @@
+放三張照片，檔名依序為workshop01、workshop02、workshop03
+檔案類型須為png

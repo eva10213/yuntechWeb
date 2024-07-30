@@ -1,0 +1,233 @@
+/* 全局样式 */
+body, header * {
+    padding: 0;
+    margin: 0;
+    font-family: "Arial", "微軟正黑體", sans-serif;
+}
+body {
+    margin: 0;
+    margin-top: 0;
+}
+
+/* 導覽列 */
+header {
+    margin: 0;
+    background-color: #AF678D;
+    width: 100vw;
+    height: 80px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+}
+
+header h1 {
+    margin: 0;
+    color: aliceblue;
+    position: absolute;
+    margin-left: 20px;
+    top: 0;
+    line-height: 80px;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+header li {
+    width: 8.5vw;
+    text-align: center;
+    list-style: none;
+    float: left;
+    transition-duration: 0.25s;
+    transition-timing-function: linear;
+}
+
+header li:hover {
+    background-color: #a46285;
+}
+
+header ul {
+    position: absolute;
+    right: 1vw;
+    top: 0;
+    line-height: 80px;
+    margin: 0;
+    padding: 0;
+}
+
+#submenu {
+    background-color: #AF678D;
+    display: none;
+    float: inline-start;
+    margin-top: 5.2vw;
+    width: 8.5vw;
+    right: inherit;
+    max-height: 300px; /* 设置子菜单的最大高度 */
+    overflow-y: auto;  /* 添加垂直滚动条 */
+}
+
+/* 菜單切換按鈕 */
+.menu-toggle {
+    display: none;
+    background-color: #AF678D;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    header h1 {
+        position: relative;
+        text-align: center;
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    header ul {
+        position: static;
+        display: none;
+        width: 100%;
+        background-color: #AF678D;
+        text-align: center;
+    }
+
+    header li {
+        width: 100%;
+        float: none;
+        display: block;
+        border-bottom: 1px solid #a46285;
+    }
+
+    header li:hover {
+        background-color: #a46285;
+    }
+
+    header ul#submenu {
+        position: static;
+        display: none;
+        background-color: #d7adc3bd;
+        width: 100%;
+        margin-top: 0;
+        max-height: 200px; /* 为移动设备设置最大高度 */
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+@media (max-width : 900px){
+    header h1 {
+        font-size: 12pt;
+    }
+}
+
+@media (max-width : 1200px){
+    header h1 {
+        font-size: 16pt;
+    }
+}
+/* 報名按鈕 */
+#apply {
+    position: fixed;
+    bottom: 15px;
+    right: 30px;
+    background-color: rgb(245, 174, 88);
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    transition-duration: 0.25s;
+    transition-timing-function: linear;
+}
+
+#apply:hover{
+    background-color: rgba(255, 255, 255, 0.796);
+    color: rgba(0, 0, 0, 0.8);
+
+}
+
+
+footer {
+    background-color: black;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:150px;
+
+}
+footer p{
+
+    color: white;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    #apply {
+    }
+
+    footer {
+        height: 12vh;
+    }
+
+    footer p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    #apply {
+    }
+
+    footer {
+        height: 10vh;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #apply {
+        right: 0px;
+        
+    }
+
+    footer {
+        height: 8vh;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}

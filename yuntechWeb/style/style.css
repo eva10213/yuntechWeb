@@ -1,0 +1,235 @@
+/* 全局样式 */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Arial", "微軟正黑體", sans-serif;
+}
+
+body {
+    margin: 0;
+    margin-top: 0;
+}
+
+/* 主頁 */
+#news {
+    width: 100%;
+    height: 90vh;
+    background:linear-gradient(to right,rgb(242, 114, 137),#f2a477);
+    background-image: url("../image/index/img01.png");
+    background-size: cover;
+    background-position-y: 30px;
+}
+
+.eventTheme {
+    height: 85vh;
+    background-image: url("../image/index/indexbackground.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: auto;
+}
+
+.eventTheme h2 {
+    text-shadow: -5.5px -5.5px 5px rgba(255, 255, 255, 0.3), 6.5px 6.5px 1px #b65836;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #ffffff;
+    margin-right: 150px;
+    font-size: 56pt;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.content-area {
+    background:linear-gradient(to right,#EB6A79,#F2A477);
+    border-radius: 15px;
+    box-shadow: 20px 20px 10px rgba(0,0,0,0.5);
+    height: 80%;
+    width: 50%;
+    align-content: center;
+    padding: 20px;
+    font-size: 22px;
+    color: aliceblue;
+    line-height: 42px;
+}
+
+.competitionTheme {
+    background-image: url("../image/index/indexbackground.png");
+    height: 85vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    line-height: 100px;
+    background-size: auto;
+}
+
+.competitionTheme h2 {
+    text-shadow: -5.5px -5.5px 5px rgba(255, 255, 255, 0.3), 6.5px 6.5px 1px #f87268;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #ffffff;
+    font-size: 56pt;
+    font-weight: bold;
+}
+
+.competitionTheme p {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 3px 8px;
+    background-image: -webkit-linear-gradient(left, #114357, #F29492 25%, #114357 50%, #F29492 75%, #114357);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-background-size: 200% 100%;
+    -webkit-animation: maskedAnimation 4s infinite linear;
+}
+
+@keyframes maskedAnimation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+.competitionTheme img {
+    width: 320px;
+    height: 180px;
+    margin-top: 0;
+    line-height: 0;
+    padding: 0px;
+    justify-self: end;
+}
+
+.mainSupport, .support {
+    background-color: white;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 120px;
+}
+
+.mainSupport h2, .support h2 {
+    text-shadow: -5.5px -5.5px 5px rgba(255, 255, 255, 0.3), 6.5px 6.5px 1px #e3f4d7;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000000;
+    font-size: 56pt;
+    font-weight: bold;
+}
+
+.icon {
+    width: 100%;
+    height: 43.5%;
+    display: flex;
+    justify-content: center;
+}
+
+.mainSupport img, .support img {
+    width: 480px;
+    height: 270px;
+    margin-left: 10px;
+}
+
+.support img {
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .news {
+        height: 50vh;
+    }
+    .eventTheme h2, .competitionTheme h2, .mainSupport h2, .support h2 {
+        font-size: 48pt;
+    }
+
+    .content-area {
+        font-size: 20px;
+        width: 60%;
+    }
+
+    .competitionTheme p {
+        font-size: 36px;
+    }
+
+    .mainSupport img, .support img {
+        width: 400px;
+        height: 225px;
+    }
+}
+
+@media (max-width: 768px) {
+    .news {
+        height: 35vh;
+    }
+    .eventTheme, .competitionTheme, .mainSupport, .support {
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .eventTheme h2, .competitionTheme h2, .mainSupport h2, .support h2 {
+        font-size: 36pt;
+        margin: 20px 0;
+    }
+    .eventTheme h2 {
+        margin-right: 15px;
+    }
+    .content-area {
+        font-size: 18px;
+        width: 80%;
+    }
+
+    .competitionTheme p {
+        font-size: 32px;
+    }
+
+    .mainSupport img, .support img {
+        width: 320px;
+        height: 180px;
+    }
+
+    .icon {
+        flex-direction: column;
+    }
+
+    .support img {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .news {
+        background-size: auto;
+    }
+    .eventTheme {
+        flex-direction: column;
+    }
+    .eventTheme h2, .competitionTheme h2, .mainSupport h2, .support h2 {
+        font-size: 24pt;
+    }
+    .eventTheme h2 {
+        margin-right: 10px;
+    }
+    .content-area {
+        font-size: 16px;
+        width: 75%;
+    }
+
+    .competitionTheme p {
+        font-size: 20px;
+        line-height: 40px;
+        
+    }
+
+    .mainSupport img, .support img {
+        width: 280px;
+        height: 157px;
+    }
+}

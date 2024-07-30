@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-image: url("../image/index/indexbackground.png");
+}
+.gallery {
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+    top:80px
+}
+
+.gallery .controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    list-style: none;
+}
+.gallery .controls .buttons {
+    height: 40px;
+    width: 140px;
+    background: #fff;
+    color: #666;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    margin: 20px;
+    box-shadow: 5px 10px 4px -4px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.gallery .controls .buttons.active {
+    background-color: #F59D93;
+    color: #fff;
+}
+
+.gallery .img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery .img-container .image {
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    border: 15px solid #fff;
+    box-shadow: 0 3px 5px rgba(0,0, 0, 0, .3);
+    margin: 20px;
+}
+
+.gallery .img-container .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery .img-container .image:hover img{
+    transition: all .4s cubic-bezier(.34,1.12,.68,1.31);
+    transform: scale(1.4);
+}
+
+.more {
+    font-size: 24px;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    width: 100px;
+    padding: 10px 15px;
+    position: relative;
+    left: 45vw;
+}
+
+.more:hover {
+    background-color: #F59D93;
+    color: white;
+}
+
+@media (max-width: 480px){
+    .more {
+        left:30vw;
+    }
+}

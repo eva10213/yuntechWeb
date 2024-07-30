@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>活動相簿</title>
+        <link rel="stylesheet" href="style/include.css">
+        <link rel="stylesheet" href="style/imgGallery.css">
+        <script src="js/script.js" defer></script>
+    </head>
+<body>
+    <header>
+        <h1>2024 全國大專校院倫理個案分析暨微電影競賽</h1>
+        <div class="menu-toggle">功能選單 ▽</div>
+        <nav>
+            <ul>
+              <li><a href="index.html">首頁</a></li>
+              <li><a href="announcement.php">最新消息</a></li>
+              <li class="has-submenu"><a href="">關於競賽 ▽</a>
+                <ul id="submenu">
+                  <li><a href="workshop.html">賽前工作坊</a></li>
+                  <li><a href="movie.html">微電影競賽</a></li>
+                  <li><a href="caseAnalysis.html">個案分析競賽</a></li>
+                  <li><a href="previousCompetitions.html">歷屆競賽</a></li>
+                  <li><a href="eventAlbum.html">活動相簿</a></li>
+                  <li><a href="download.html">下載專區</a></li>
+                </ul>
+              </li>
+              <li><a href="https://www.yuntech.edu.tw/index.php/2019-08-20-05-41-18">交通資訊</a></li>
+              <li><a href="https://www.facebook.com/profile.php?id=61563204423995&is_tour_completed">粉絲專頁</a></li>
+            </ul>
+        </nav>
+      </header>
+    
+    <main>
+        <div class="gallery">
+
+            <div class="controls">
+                <li class="buttons active" data-filter="all" >全部</li>
+                <li class="buttons" data-filter="movie">微電影</li>
+                <li class="buttons" data-filter="case">企業倫理</li>
+                <li class="buttons" data-filter="workshop">賽前工作坊</li>
+            </div>
+
+            <div class="img-container">
+                <a href="image/eventThemeBackground.png" class="image movie">
+                    <img src="image/movie/movie01.png" alt="微電影競賽照片1">
+                </a>
+                <a href="image/heart.png"class="image movie">
+                    <img src="image/movie/movie02.png" alt="微電影競賽照片2">
+                </a>
+                <a href="image/img01.jpg" class="image movie">
+                    <img src="image/movie/movie03.png" alt="微電影競賽照片3">
+                </a>
+                <a href="image/img02.jpg" class="image case">
+                    <img src="image/case/case01.png" alt="企業倫理照片1">
+                </a>
+                <a href="image/img03.jpg" class="image case">
+                    <img src="image/case/case02.png" alt="企業倫理照片2">
+                </a>
+                <a href="image/logo2.png" class="image case">
+                    <img src="image/case/case03.png" alt="企業倫理照片3">
+                </a>
+                <a href="image/logo3.png" class="image workshop">
+                    <img src="image/workshop/workshop01.png" alt="工作坊照片1">
+                </a>
+                <a href="image/logo4.png" class="image workshop">
+                    <img src="image/workshop/workshop02.png" alt="工作坊照片2">
+                </a>
+                <a href="image/post.jpg" class="image workshop">
+                    <img src="image/workshop/workshop03.png" alt="工作坊照片3">
+                </a>
+                
+            </div>
+        </div>
+        <a href="https://drive.google.com/drive/folders/1O7fSnMi1SI_SWGfEO8EhE5xW8YNKaOVY?usp=sharing" class="more">查看更多</a>
+    </main>
+    <footer>
+        <p>Copyright © 2024 全國大專校院倫理個案分析暨微電影競賽雲林科技大學籌辦團隊</p>
+
+    </footer>
+
+    <script>
+        // 控制按鈕
+        var btns = document.querySelectorAll(".buttons");
+        var img = document.querySelectorAll('.image');
+        for(let i=0; i<btns.length; i++){
+            // 顏色改變
+                btns[i].addEventListener('click',function(event){
+                changeAllBtnColors();
+                var currentBtn = event.target;
+                currentBtn.style.color="white";   
+                currentBtn.style.backgroundColor="#F59D93";    
+            // 換相片
+                var filter = event.target.getAttribute('data-filter');
+                for (i=0; i<img.length; i++){
+                    img[i].style.display = "none";
+                }
+                if (filter == 'all') {
+                    img.forEach(i => {
+                        i.style.display="block";
+                    })
+                }
+                else {
+
+                    var filterImg = document.querySelectorAll(`.image.${filter}`);
+                    filterImg.forEach(i => {
+                        i.style.display = "block";
+                    })
+                }
+            })
+        }
+        function changeAllBtnColors(){
+            for(let i=0; i<btns.length; i++){
+                btns[i].style.color = "black";
+                btns[i].style.backgroundColor = "white";
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>
