@@ -8,16 +8,26 @@
 body {
     margin: 0;
     margin-top: 0;
+    overflow:hidden;
+    height: 100%;
 }
-
+:root {
+	overflow-x: hidden;
+}
 /* 主頁 */
 #news {
     width: 100%;
-    height: 90vh;
-    background:linear-gradient(to right,rgb(242, 114, 137),#f2a477);
-    background-image: url("../image/index/img01.png");
-    background-size: cover;
-    background-position-y: 30px;
+    margin-top: 100px;
+    /* background-color: #b65836; */
+
+}
+
+#news > img {
+    height: 100%;
+    width: 100%;
+    /* margin-bottom: 100px; */
+    transform: translateY(30px);
+    object-fit: contain
 }
 
 .eventTheme {
@@ -27,6 +37,9 @@ body {
     justify-content: center;
     align-items: center;
     background-size: auto;
+    margin-top: 100px;
+    padding-top: 100px;
+    
 }
 
 .eventTheme h2 {
@@ -38,13 +51,14 @@ body {
     font-size: 56pt;
     font-weight: bold;
     white-space: nowrap;
+    margin-left: 20px;
 }
 
 .content-area {
     background:linear-gradient(to right,#EB6A79,#F2A477);
     border-radius: 15px;
     box-shadow: 20px 20px 10px rgba(0,0,0,0.5);
-    height: 80%;
+    height: auto;
     width: 50%;
     align-content: center;
     padding: 20px;
@@ -104,7 +118,9 @@ body {
 
 .mainSupport, .support {
     background-color: white;
-    height: 65vh;
+    height:auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,30 +158,48 @@ body {
 /* 响应式设计 */
 @media (max-width: 1200px) {
     .news {
-        height: 50vh;
+        background-size: 1600px 900px;
     }
     .eventTheme h2, .competitionTheme h2, .mainSupport h2, .support h2 {
-        font-size: 48pt;
+        font-size: 32pt;
     }
 
     .content-area {
         font-size: 20px;
-        width: 60%;
     }
 
     .competitionTheme p {
         font-size: 36px;
     }
+    .competitionTheme {
+        height: 60vh;
+    }
 
     .mainSupport img, .support img {
-        width: 400px;
-        height: 225px;
+        width: 320px;
+        height: 180px;
     }
+
+    .icon {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+
+    }
+    .mainSupport, .support {
+        height: 100vh;
+        margin-top: 50px;
+    }
+    .support img {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
 }
 
 @media (max-width: 768px) {
     .news {
-        height: 35vh;
+        background-size: 1280px 720px;
     }
     .eventTheme, .competitionTheme, .mainSupport, .support {
         height: auto;
@@ -174,15 +208,14 @@ body {
     }
 
     .eventTheme h2, .competitionTheme h2, .mainSupport h2, .support h2 {
-        font-size: 36pt;
-        margin: 20px 0;
+        font-size: 28pt;
     }
     .eventTheme h2 {
         margin-right: 15px;
     }
     .content-area {
         font-size: 18px;
-        width: 80%;
+        
     }
 
     .competitionTheme p {
@@ -206,10 +239,16 @@ body {
 
 @media (max-width: 480px) {
     .news {
-        background-size: auto;
+        width: 100%;
+        height: 50vh;
+    }
+    .news >img{
+
     }
     .eventTheme {
         flex-direction: column;
+        margin-top: 0px;
+        padding-top: 50px;
     }
     .eventTheme h2, .competitionTheme h2, .mainSupport h2, .support h2 {
         font-size: 24pt;
@@ -220,12 +259,13 @@ body {
     .content-area {
         font-size: 16px;
         width: 75%;
+        line-height: 30px;
     }
 
     .competitionTheme p {
         font-size: 20px;
         line-height: 40px;
-        
+        white-space: nowrap;
     }
 
     .mainSupport img, .support img {

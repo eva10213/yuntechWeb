@@ -73,15 +73,18 @@ body {
     color: black;
     font-weight: bold;
     text-decoration: none;
-    width: 100px;
+    width: 130px;
     padding: 10px 15px;
     position: relative;
     left: 45vw;
+    margin-bottom: 5vh;
+    display: block;
 }
 
 .more:hover {
     background-color: #F59D93;
     color: white;
+    
 }
 
 @media (max-width: 480px){
