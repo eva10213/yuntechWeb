@@ -25,3 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+function insertText (text){
+    var textarea = document.getElementById('content');
+    var cursor = textarea.selectionStart;
+    var textBefore = textarea.value.substring(0,cursor);
+    var textAfter = textarea.value.substring(cursor);
+   
+    textarea.value = textBefore + text + textAfter;
+    textarea.selectionStart = textarea.selectionEnd = cursor + text.length ;
+    textarea.focus();
+}

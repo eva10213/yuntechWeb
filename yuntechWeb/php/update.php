@@ -39,6 +39,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src = "../js/script.js"></script> -->
+    <script src="../js/script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -49,9 +51,10 @@
         <br>
         <br>
         <label for="content">內容</label>
-        <textarea name="content" style="width: 300px; height: 100px;"><?php echo $readResult['content']; ?></textarea>
+        <textarea name="content" id='content' style="width: 300px; height: 100px;"><?php echo $readResult['content']; ?></textarea>
         <br>
         <br>
+        <input type="button" value ="點我幫文章內容增加換行" onclick  = "insertText('<br>')">
         <input type="submit" name="" id="" value="送出修改資料">
     </form>
 </body>

@@ -21,7 +21,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>read</title>
-    <a href="insert.html">新增"最新訊息"</a>
+    <a href="insert.php">新增"最新訊息"</a>
     <a href="home.php">回到主頁</a>
     <style>
         a {

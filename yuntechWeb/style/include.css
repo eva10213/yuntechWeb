@@ -8,10 +8,7 @@ body {
     margin: 0;
     margin-top: 0;
 }
-body > footer {
-    position: sticky;
-    top: 100vh;
-}
+
 /* 導覽列 */
 header {
     margin: 0;
@@ -64,7 +61,7 @@ header ul {
     background-color: #AF678D;
     display: none;
     float: inline-start;
-    margin-top: 5.2vw;
+    margin-top: 4.5vw;
     width: 8.5vw;
     right: inherit;
     max-height: 300px; /* 设置子菜单的最大高度 */
@@ -80,8 +77,18 @@ header ul {
     padding: 10px;
     cursor: pointer;
 }
+@media (max-width: 1440px) {
+    #submenu {
+        margin-top: 5.2vw;
+    }
+} 
 
-/* 响应式样式 */
+@media (max-width: 1024px) {
+    #submenu {
+        margin-top: 7.8vw;
+    }
+} 
+
 @media (max-width: 768px) {
     header {
         height: auto;
@@ -168,6 +175,7 @@ header ul {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     transition-duration: 0.25s;
     transition-timing-function: linear;
+    z-index: 9999 ;
 }
 
 #apply:hover{
@@ -175,7 +183,12 @@ header ul {
     color: rgba(0, 0, 0, 0.8);
 
 }
-
+body > footer {
+    position: sticky;
+    top: 100vh;
+    z-index: 0;
+    
+}
 
 footer {
     background-color: black;
@@ -184,8 +197,9 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    top:150px;
+    /* position: relative;
+    top:150px; */
+
 
 }
 footer p{
