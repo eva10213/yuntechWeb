@@ -38,7 +38,7 @@
                 </ul>
               </li>
               <li><a href="https://www.yuntech.edu.tw/index.php/2019-08-20-05-41-18">交通資訊</a></li>
-              <li><a href="https://www.facebook.com/profile.php?id=61563204423995&is_tour_completed">粉絲專頁</a></li>
+              <li><a href="https://www.facebook.com/NCCBE/">粉絲專頁</a></li>
             </ul>
         </nav>
       </header>
