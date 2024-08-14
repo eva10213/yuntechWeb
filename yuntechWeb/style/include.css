@@ -195,15 +195,18 @@ footer {
     width: 100vw;
     height: 15vh;
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
+    flex-direction: column;
     /* position: relative;
     top:150px; */
 
 
 }
 footer p{
-
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-left: 15px;
     color: white;
 }
 
@@ -241,7 +244,8 @@ footer p{
     }
 
     footer {
-        height: 8vh;
+
+        align-items: start;
     }
 
     footer p {

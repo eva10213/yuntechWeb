@@ -31,7 +31,7 @@ body {
 }
 
 .eventTheme {
-    height: 85vh;
+    height: 65vh;
     background-image: url("../image/index/indexbackground.png");
     display: flex;
     justify-content: center;
@@ -69,9 +69,9 @@ body {
 
 .competitionTheme {
     background-image: url("../image/index/indexbackground.png");
-    height: 85vh;
+    height: 75vh;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     line-height: 100px;
@@ -146,7 +146,7 @@ body {
 
 .mainSupport img, .support img {
     width: 480px;
-    height: 270px;
+    height: 330px;
     margin-left: 10px;
 }
 
