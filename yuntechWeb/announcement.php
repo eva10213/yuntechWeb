@@ -68,6 +68,7 @@
   </main>
 
   <footer>
+  <p>聯絡方式:Corporateethics113@gmail.com</p>
     <p>Copyright © 2024 全國大專校院倫理個案分析暨微電影競賽雲林科技大學籌辦團隊</p>
   </footer>
 </body>
