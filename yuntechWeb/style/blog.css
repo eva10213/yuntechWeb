@@ -160,10 +160,11 @@ hr {
     border-radius: 15px;
     position: relative;
     left: 133px;
-    top: 80px;
+    top: 10px;
     box-shadow: 16px 17px 4px -8px rgba(0,0,0,0.1);
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
 
 }
 
@@ -207,6 +208,13 @@ hr {
 
 }
 
+#word a:hover {
+    border:3px rgba(118, 192, 224, 0.364)solid ;
+    background:rgba(118, 192, 224, 0.581);
+}
+#word a b {
+    color: rgb(96, 121, 159);
+}
 /* 响应式设计 */
 @media (max-width: 1200px) {
     .file {
